@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Мой профиль</title>
+
+    <!-- Внешний CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    
+  <!-- ========================================== -->
+<!-- НАВИГАЦИЯ С КНОПКОЙ ВОЙТИ                  -->
+<!-- ========================================== -->
+<nav class="main-nav">
+    <ul class="navigation">
+        <li><a href="site.html">Главная</a></li>
+        <li><a href="site2.html">Игры</a></li>
+        <li><a href="site3.html">Контакты</a></li>
+        <li><a href="site4.html">Игры из базы</a></li>
+        <li><a href="admin.html">Администрация</a></li>
+        <li><a href="site6.html">Бургерная</a></li>
+    </ul>
+
+    <button id="login-btn" class="login-btn">🔐 Войти</button>
+
+    <div id="user-menu" class="user-menu" style="display: none;">
+        <span id="user-display-name" class="user-name">Пользователь</span>
+        <button id="logout-btn" class="logout-btn-small">Выйти</button>
+    </div>
+</nav>
+
+<!-- ========================================== -->
+<!-- МОДАЛЬНОЕ ОКНО АУТЕНТИФИКАЦИИ              -->
+<!-- ========================================== -->
+<div class="auth-modal" id="auth-modal">
+    <div class="auth-modal-window">
+
+        <button class="modal-close" id="modal-close">✕</button>
+
+        <h2 class="auth-title">🔐 Добро пожаловать!</h2>
+
+        <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">Вход</button>
+            <button class="auth-tab" data-tab="register">Регистрация</button>
+        </div>
+
+        <form id="login-form" class="auth-form active">
+            <div class="form-group">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" placeholder="example@mail.ru" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Пароль:</label>
+                <input type="password" id="login-password" placeholder="••••••" required>
+            </div>
+            <button type="submit" class="auth-btn">Войти</button>
+        </form>
+
+        <form id="register-form" class="auth-form">
+            <div class="form-group">
+                <label for="register-name">Имя:</label>
+                <input type="text" id="register-name" placeholder="Ваше имя" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" placeholder="example@mail.ru" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Пароль (мин. 6 символов):</label>
+                <input type="password" id="register-password" placeholder="••••••" minlength="6" required>
+            </div>
+            <button type="submit" class="auth-btn">Зарегистрироваться</button>
+        </form>
+
+    </div>
+</div>
+
+    <h1>Мой профиль</h1>
+
+    <h2>Информация обо мне</h2>
+
+    <p>
+        <strong>Имя:</strong> Вадим
+    </p>
+
+    <p>
+        <strong>Группа:</strong> 303
+    </p>
+
+    <h2>О себе</h2>
+
+    <p>
+        Я студент, интересуюсь созданием сайтов и компьютерными играми.
+    </p>
+
+    <p>
+        В свободное время люблю играть в игры и изучать программирование.
+    </p>
+
+    <h2>Мои интересы</h2>
+
+    <ul>
+        <li>Компьютерные игры</li>
+        <li>Программирование</li>
+        <li>Создание сайтов</li>
+        <li>Музыка</li>
+    </ul>
+
+    <h2 style="text-align: center;">
+        Мои любимые игры
+    </h2>
+
+    <!-- КАРТОЧКИ ИГР -->
+    <div class="card-container">
+
+        
+        <div class="game-card">
+
+          <img src="image/sols1.png" alt>
+
+            <h3 class="game-title">
+                Nine Sols
+            </h3>
+
+            <p class="game-short">
+                Атмосферная 2D игра с элементами метроидвании.
+            </p>
+
+            <button class="details-btn">
+                Подробнее
+            </button>
+
+            <div class="details">
+
+                <p>
+                    <strong>Жанр:</strong> Action / Metroidvania
+                </p>
+
+                <p>
+                    <strong>Особенность:</strong>
+                    Боевая система с парированием атак.
+                </p>
+
+                <p>
+                    <strong>Разработчик:</strong>
+                    Red Candle Games
+                </p>
+
+                <p>
+                    <a href="https://store.steampowered.com/app/1809540/Nine_Sols/?l=russian">
+                        Страница игры в Steam
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="game-card">
+
+            <img src="image/niko1.png" alt>
+
+            <h3 class="game-title">
+                OneShot
+            </h3>
+
+            <p class="game-short">
+                Приключенческая игра с необычной историей.
+            </p>
+
+            <button class="details-btn">
+                Подробнее
+            </button>
+
+            <div class="details">
+
+                <p>
+                    <strong>Жанр:</strong>
+                    Приключение / RPG
+                </p>
+
+                <p>
+                    <strong>Главный герой:</strong>
+                    Нико
+                </p>
+
+                <p>
+                    <strong>Особенность:</strong>
+                    Игра взаимодействует с игроком и ломает четвёртую стену.
+                </p>
+
+                <p>
+                    <a href="https://store.steampowered.com/app/420530/OneShot/?l=russian">
+                        Страница игры в Steam
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+       
+        <div class="game-card">
+
+           <img src="image/puro1.png" alt>
+
+            <h3 class="game-title">
+                Changed
+            </h3>
+
+            <p class="game-short">
+                Приключенческая игра с исследованием лаборатории.
+            </p>
+
+            <button class="details-btn">
+                Подробнее
+            </button>
+
+            <div class="details">
+
+                <p>
+                    <strong>Жанр:</strong>
+                    Приключение / головоломка
+                </p>
+
+                <p>
+                    <strong>Главный герой:</strong>
+                    Колин
+                </p>
+
+                <p>
+                    <strong>Особенность:</strong>
+                    Исследование лаборатории и решение различных задач.
+                </p>
+
+                <p>
+                    <a href="https://store.steampowered.com/app/814540/Changed/?l=russian">
+                        Страница игры в Steam
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="game-card">
+
+            <img src="image/hornet1.png" alt>
+
+            <h3 class="game-title">
+                Hollow Knight
+            </h3>
+
+            <p class="game-short">
+                Атмосферная метроидвания с исследованием огромного мира.
+            </p>
+
+            <button class="details-btn">
+                Подробнее
+            </button>
+
+            <div class="details">
+
+                <p>
+                    <strong>Жанр:</strong>
+                    Metroidvania / Action
+                </p>
+
+                <p>
+                    <strong>Разработчик:</strong>
+                    Team Cherry
+                </p>
+
+                <p>
+                    <strong>Особенность:</strong>
+                    Большой мир, сложные боссы и множество секретов.
+                </p>
+
+                <p>
+                    <a href="https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/?l=russian">
+                        Страница игры в Steam
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="game-card">
+
+            <img src="image/cult1.png" alt>
+
+            <h3 class="game-title">
+                Cult of the Lamb
+            </h3>
+
+            <p class="game-short">
+                Игра про создание собственного культа и приключения.
+            </p>
+
+            <button class="details-btn">
+                Подробнее
+            </button>
+
+            <div class="details">
+
+                <p>
+                    <strong>Жанр:</strong>
+                    Action / Roguelike / Симулятор
+                </p>
+
+                <p>
+                    <strong>Главный герой:</strong>
+                    Агнец
+                </p>
+
+                <p>
+                    <strong>Особенность:</strong>
+                    Можно развивать поселение и управлять своим культом.
+                </p>
+
+                <p>
+                    <a href="https://store.steampowered.com/app/1313140/Cult_of_the_Lamb/">
+                        Страница игры в Steam
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   
+    <script src="js/script.js"></script>
+
+    <script src="js/admin.js"></script>
+
+<script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAx4GtZ1fOh0i_5isXBfpP5cTe13chDy_4",
+        authDomain: "mygamesite-207fa.firebaseapp.com",
+        projectId: "mygamesite-207fa",
+        storageBucket: "mygamesite-207fa.firebasestorage.app",
+        messagingSenderId: "990227201280",
+        appId: "1:990227201280:web:6f95efd3fd3ca9567a07e5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    window.db = db;
+    window.auth = auth;
+    window.firebaseReady = true;
+</script>
+</body>
+</html>
+
+
